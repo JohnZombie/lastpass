@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#This checks if lastpass plugin is installed for Chrome
+#This checks if lastpass plugin is installed for Chrome,Firefox, and on Computer.
 
 lpchrome=$(cd /Users/$USER/Library/Application\ Support/Google/Chrome/Default/Extensions/hdokiejnpimakedhajhdlcegeplioahd)
 lpfirefox=$(cd /Users/$USER/Library/Application\ Support/Firefox/Profiles/hcbg6rr3.default-1472125718024/extensions/support@lastpass.com.xpi)
@@ -21,6 +21,7 @@ if [ -e $lpfirefox ]; then
 else
 	echo "Lastpass on Firefox not found..Please install from https://addons.mozilla.org/en-US/firefox/addon/lastpass-password-manager/"
 fi
+# Installs homebrew and lastpass CLI tools
 function install_brew_osx() 
 {
 echo "Now installing brew for OSX"
