@@ -5,9 +5,9 @@
 lpchrome=$(cd /Users/$USER/Library/Application\ Support/Google/Chrome/Default/Extensions/hdokiejnpimakedhajhdlcegeplioahd)
 lpfirefox=$(cd /Users/$USER/Library/Application\ Support/Firefox/Profiles/hcbg6rr3.default-1472125718024/extensions/support@lastpass.com.xpi)
 lpapp=$(cd /Applications/LastPass.app)
-
+clear
 if [ -e $lpapp ]; then
-    echo "Lastpass on Mac."
+    echo "Lastpass on Mac found."
 else
    echo "Lastpass on Mac not found Please download from Managed Software Center.."
 fi
