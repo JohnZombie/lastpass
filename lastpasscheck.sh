@@ -2,24 +2,20 @@
 
 #This checks if lastpass plugin is installed for Chrome,Firefox, and on Computer.
 
-lpchrome=$(cd /Users/$USER/Library/Application\ Support/Google/Chrome/Default/Extensions/hdokiejnpimakedhajhdlcegeplioahd)
-lpfirefox=$(cd /Users/$USER/Library/Application\ Support/Firefox/Profiles/hcbg6rr3.default-1472125718024/extensions/support@lastpass.com.xpi)
-lpapp=$(cd /Applications/LastPass.app)
-clear
-if [ -e $lpapp ]; then
-    echo "Lastpass on Mac found."
+if [ ! -f "/Applications/LastPass.app" ]; then
+echo "Lastpass on Mac found."
 else
-   echo "Lastpass on Mac not found Please download from Managed Software Center.."
+echo "Lastpass on Mac not found Please download from Managed Software Center.."
 fi
-if [ -e $lpchrome ]; then
-    echo "Lastpass on Chrome found."
+if [ ! -f "/Users/$USER/Library/Application\ Support/Google/Chrome/Default/Extensions/hdokiejnpimakedhajhdlcegeplioahd" ]; then
+echo "Lastpass on Chrome found."
 else
-   echo "Lastpass on Chrome not found.. Please install from https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd?hl=en"
+echo "Lastpass on Chrome not found.. Please install from https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd?hl=en"
 fi
-if [ -e $lpfirefox ]; then
-	echo "Lastpass on Firefox found."
+if [ ! -f "/Users/$USER/Library/Application\ Support/Firefox/Profiles/hcbg6rr3.default-1472125718024/extensions/support@lastpass.com.xpi" ]; then
+echo "Lastpass on Firefox found."
 else
-	echo "Lastpass on Firefox not found..Please install from https://addons.mozilla.org/en-US/firefox/addon/lastpass-password-manager/"
+echo "Lastpass on Firefox not found..Please install from https://addons.mozilla.org/en-US/firefox/addon/lastpass-password-manager/"
 fi
 # Installs homebrew and lastpass CLI tools
 function install_brew_osx() 
